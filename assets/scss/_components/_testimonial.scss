@@ -1,0 +1,30 @@
+.testimonial {
+  @include breakpoint(xl) {
+    .title {
+      margin-bottom: 230px;
+    }
+  }
+  margin-top: 180px;
+  &__wapper {
+    &_item {
+      display: flex;
+      gap: 15px;
+      img {
+        width: 80px;
+        @include breakpoint(lg) {
+          width: 60px;
+        }
+      }
+      .review {
+        margin-top: 50px;
+        @include breakpoint(lg) {
+          margin-top: 30px;
+        }
+        .line {
+          width: 1px;
+          background-color: var(--pra);
+        }
+      }
+    }
+  }
+}

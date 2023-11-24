@@ -1,0 +1,22 @@
+.common_btn {
+  outline: none;
+  @include center();
+  gap: 15px;
+  padding: 12px 32px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1.6px solid var(--white);
+  color: var(--white);
+  transition: all 1s;
+  img{
+    height: 15px;
+    object-fit: contain;
+    transition: all 1s;
+  }
+  &:hover img{
+    // margin-left: 10px;
+    transform: translateX(10px);
+    // transform: scale(0.9);
+  }
+}

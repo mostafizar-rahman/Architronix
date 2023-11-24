@@ -1,0 +1,124 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+
+  &__wapper {
+    position: relative;
+    background-color: rgba($color: #ebe5da, $alpha: 0.5);
+    box-shadow: 0px 1px 5px 0px rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+  }
+  hr {
+    margin: 0;
+  }
+  // ------------- start Top
+  &__top {
+    padding: 10px 45px;
+    .left_side {
+      a {
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+    .right_side {
+      .number {
+        font-weight: 500;
+        font-size: 15px;
+      }
+      .line {
+        width: 1.3px;
+        height: 23px;
+        background: #253b2f;
+      }
+      li {
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .divided {
+        color: #253b2f;
+        // font-size: 19px;
+        transform: rotate(18deg);
+      }
+    }
+  }
+  // ------------ End Top
+
+  // ------------ Start Bottom
+  &__bottom {
+    // padding: 0 45px;
+
+    @include breakpoint(md) {
+      padding: 17px 20px;
+    }
+    .logo {
+      img {
+        max-width: 180px;
+        object-fit: contain;
+      }
+    }
+    .icons {
+      @include breakpoint(md) {
+        margin-left: 15px;
+      }
+      img {
+        max-width: 20px;
+      }
+    }
+    &_right {
+      @include breakpoint(md) {
+        position: absolute;
+        left: -100%;
+        transition: all 0.5s;
+        top: 100%;
+        max-width: 300px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($color: #ebe5da, $alpha: 0.9);
+        box-shadow: 0px 1px 5px 0px rgba($color: #000000, $alpha: 0.2);
+        backdrop-filter: blur(10px);
+      }
+    }
+    .active_menu {
+      left: 0;
+    }
+    .menu_icon {
+      display: none;
+      @include breakpoint(md) {
+        display: block;
+      }
+      img {
+        width: 40px;
+      }
+    }
+  }
+  &__navbar {
+    a {
+      padding: 30px 25px;
+      display: inline-block;
+      color: #253b2f;
+      font-size: 17px;
+      @include breakpoint(xl) {
+        padding: 25px 20px;
+      }
+      @include breakpoint(xl) {
+        padding: 18px 15px;
+        font-size: 15px;
+      }
+      @include breakpoint(lg) {
+        padding: 12px 12px;
+        font-size: 15px;
+      }
+      @include breakpoint(md) {
+        display: block;
+      }
+    }
+    .active {
+      background-color: #253b2f;
+      color: white;
+    }
+  }
+}

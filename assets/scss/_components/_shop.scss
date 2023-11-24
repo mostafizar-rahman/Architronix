@@ -1,0 +1,56 @@
+.shop {
+  &__wapper {
+    &_item {
+      @include breakpoint(sm) {
+        max-width: 320px;
+        margin: auto;
+      }
+      .thumbnail__img_box {
+        position: relative;
+        .thumbnail__img {
+          width: 100%;
+        }
+        .add__to_cart {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 0%;
+          height: 0%;
+          opacity: 0;
+          // backdrop-filter: blur(5px);
+          background-color: rgba($color: #000000, $alpha: 0.3);
+          @include center();
+          transition: all 0.5s;
+          img{
+
+            cursor: pointer;
+          }
+        }
+      }
+
+      .content {
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 4px;
+        }
+        h6 {
+          font-weight: 300;
+          font-size: 18px;
+        }
+        .star {
+          margin-top: 6px;
+        }
+      }
+      &:hover .add__to_cart {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .slick-slide {
+      margin: 0 10px;
+    }
+  }
+}

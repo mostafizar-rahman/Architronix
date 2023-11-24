@@ -1,0 +1,30 @@
+.footer {
+    margin-top: 110px;
+  &__wapper {
+    background-image: url("/assets/img/Rectangle\ 30.png");
+    &_row {
+      max-width: 1064px;
+      margin: auto;
+      padding: 40px 0;
+    }
+    &_address {
+      .name {
+        font-size: 20px;
+        margin-bottom: 0px;
+        font-weight: 600;
+      }
+      .line {
+        width: 120px;
+      }
+      .address {
+        font-size: 14px;
+      }
+      .contact {
+        p {
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

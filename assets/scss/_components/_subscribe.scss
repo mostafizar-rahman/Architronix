@@ -1,0 +1,32 @@
+.subscribe {
+    margin-top: 140px;
+  &__wapper {
+    max-width: 1064px;
+    margin: auto;
+    background-image: url("/assets/img/Rectangle\ 32.png");
+    background-size: cover;
+    background-position: bottom;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    h1{
+        color: var(--white);
+        font-size: 100px;
+        font-weight: 600;
+        @include breakpoint(xl){
+            font-size: 80px;
+        }
+        @include breakpoint(md){
+            font-size: 60px;
+        }
+        @include breakpoint(md){
+            font-size: 40px;
+        }
+    }
+    button{
+        background-color: var(--white);
+        color: var(--pra);
+    }
+  }
+}

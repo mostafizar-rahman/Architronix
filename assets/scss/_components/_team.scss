@@ -1,0 +1,79 @@
+.team {
+  &__wapper {
+    max-width: 1064px;
+    margin: auto;
+    position: relative;
+    @include breakpoint(xl) {
+      width: 100%;
+    }
+
+    .team__card {
+      max-width: 340px;
+      @include breakpoint(lg) {
+        max-width: 320px;
+        margin: auto;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .team__card_3 {
+      position: absolute;
+      @include breakpoint(xxl) {
+        position: static;
+      }
+      top: 150px;
+    }
+    .team__card_1 {
+      @extend .team__card_3;
+      top: 80px;
+    }
+
+    .team__card_footer {
+      // position: absolute;
+      transform: translateY(-30px);
+      max-width: 270px;
+      width: 100%;
+      background-color: var(--dipGray);
+      overflow: hidden;
+
+      .card__footer_content {
+        padding: 20px 20px;
+        h5 {
+          margin-bottom: 4px;
+          font-weight: 600;
+          color: var(--pra);
+        }
+        p {
+          font-size: 14px;
+          color: var(--pra);
+          margin-bottom: 0;
+        }
+      }
+      .img__1 {
+        position: absolute;
+        bottom: 9px;
+        max-height: 1px;
+      }
+      .img__2 {
+        position: absolute;
+        top: 9px;
+        max-height: 1px;
+      }
+      .img__3 {
+        position: absolute;
+        right: 9px;
+        height: 100%;
+        width: 1px;
+        bottom: 0;
+      }
+      .img__4 {
+        position: absolute;
+        left: 9px;
+        width: 0.5px;
+        height: 100%;
+        bottom: 0;
+      }
+    }
+  }
+}
