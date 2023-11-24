@@ -1,5 +1,8 @@
 .footer {
-    margin-top: 110px;
+  margin-top: 110px;
+  @include breakpoint(xs){
+    margin-top: 80px;
+  }
   &__wapper {
     background-image: url("/assets/img/Rectangle\ 30.png");
     &_row {
@@ -7,8 +10,8 @@
       margin: auto;
       padding: 40px 0;
     }
-   
-    &_socal{
+
+    &_socal {
       li {
         font-size: 15px;
         font-weight: 500;

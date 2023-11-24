@@ -5,7 +5,17 @@
   }
   @include breakpoint(xl) {
     .title {
-      margin-bottom: 230px;
+      margin-bottom: 200px;
+    }
+  }
+  @include breakpoint(md) {
+    .title {
+      margin-bottom: 120px;
+    }
+  }
+  @include breakpoint(xs) {
+    .title {
+      margin-bottom: 160px;
     }
   }
   &__wapper {
@@ -101,6 +111,17 @@
           transform: translateY(30px);
           max-width: 600px;
           width: 100%;
+        }
+        @include breakpoint(md) {
+          max-width: 500px;
+          min-height: 300px;
+          object-fit: cover;
+        }
+        @include breakpoint(sm) {
+          max-width: 400px;
+        }
+        @include breakpoint(xs) {
+          max-width: 350px;
         }
       }
     }

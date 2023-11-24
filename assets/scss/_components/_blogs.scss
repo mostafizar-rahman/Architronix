@@ -4,6 +4,11 @@
       margin-bottom: 280px;
     }
   }
+  @include breakpoint(xs) {
+    .title {
+      margin-bottom: 230px;
+    }
+  }
   &__wapper {
     max-width: 1064px;
     margin: auto;

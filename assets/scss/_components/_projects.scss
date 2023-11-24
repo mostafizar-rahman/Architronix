@@ -1,4 +1,14 @@
 .projects {
+  @include breakpoint(lg){
+    .title{
+      margin-bottom: 250px;
+    }
+  }
+  @include breakpoint(sm){
+    .title{
+      margin-bottom: 230px;
+    }
+  }
   &__wapper {
     position: relative ;
     .projects__slider {
@@ -7,8 +17,8 @@
       position: static !important;
     }
     &_item {
-      position: relative;
       overflow-x: auto;
+      position: relative;
       .project__img {
         width: 100%;
         height: 100%;
@@ -55,6 +65,10 @@
       @include breakpoint(md) {
         max-width: 450px;
         padding: 50px 30px;
+      }
+      @include breakpoint(xs) {
+        max-width: 350px;
+        padding: 40px 10px;
       }
       h2 {
         font-size: 50px;
@@ -119,7 +133,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-image: url("./assets/img/icon/Group\ 47.png");
+      background-image: url("/assets/img/icon/Group\ 47.png");
       background-repeat: no-repeat;
       width: 40px;
       height: 23px;
