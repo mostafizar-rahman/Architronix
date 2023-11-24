@@ -1,16 +1,16 @@
 .banner {
   // overflow-x: hidden;
-  
+
   position: relative;
   &__slides {
     .item {
       position: relative;
-      // padding: 100px 0;
       img {
         width: 100%;
-        height: 100%;
+        // height: 100%;
+        object-fit: cover;
+        min-height: 600px;
         max-height: 100vh;
-        
       }
     }
     .item_content {
@@ -18,17 +18,16 @@
       top: 50%;
       transform: translateY(-50%);
       left: 225px;
+      padding: 100px 0;
       @include breakpoint(xl) {
         left: 20%;
       }
-      // @include breakpoint(lg) {
-      //   left: 150px;
-      // }
-      // @include breakpoint(md) {
-      //   left: 120px;
-      // }
-      @include breakpoint(sm) {
+     
+      @include breakpoint(lg) {
         left: 10%;
+      }
+      @include breakpoint(sm) {
+        left: 5%;
       }
       h1 {
         font-size: 150px;
@@ -65,29 +64,23 @@
     position: absolute;
     right: 6%;
     bottom: 0;
-    // @include flex();
     display: flex;
     align-items: start;
     gap: 20px;
     padding: 40px 25px;
     @include breakpoint(xxl) {
-      right: 10%;
+      right: 9%;
     }
     @include breakpoint(xl) {
       padding: 30px 20px;
-      right: 13%;
-    }
-    @include breakpoint(lg) {
-      padding: 30px 20px;
-      right: 15%;
     }
     @include breakpoint(md) {
       padding: 25px 15px;
-      right: 20%;
+      // right: 13%;
     }
     @include breakpoint(sm) {
       padding: 22px 12px;
-      // right: 10%;
+      right: 17%;
     }
     .outlline_text_blue {
       font-size: 44px;
@@ -130,25 +123,16 @@
   //   ----------------- Banner nav icons
   .banner__nav {
     position: absolute;
-    left: 94%;
+    right: 2%;
     z-index: 100;
     border: none;
     width: 70px;
     height: 68px;
-    @include breakpoint(xxl) {
-      left: 90%;
-    }
     @include breakpoint(xl) {
-      left: 87%;
-    }
-    @include breakpoint(lg) {
-      left: 85%;
+      height: 58px;
     }
     @include breakpoint(md) {
-      left: 83%;
-    }
-    @include breakpoint(md) {
-      left: 80%;
+      right: 0%;
     }
   }
   .banner_prev-arrow {
@@ -156,6 +140,9 @@
     transform: rotate(180deg);
     background-color: var(--pra);
     z-index: 10;
+    @include breakpoint(xl) {
+      top: 83%;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -172,6 +159,9 @@
   .banner_next-arrow {
     top: 91%;
     background-color: var(--white);
+    @include breakpoint(xl) {
+      top: 92%;
+    }
     &::after {
       content: "";
       position: absolute;

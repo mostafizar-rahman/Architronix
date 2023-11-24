@@ -1,10 +1,17 @@
 .testimonial {
+  margin-top: 180px;
   @include breakpoint(xl) {
+    margin-top: 50px;
     .title {
       margin-bottom: 230px;
     }
   }
-  margin-top: 180px;
+  @include breakpoint(xl) {
+    .title {
+      margin-bottom: 200px;
+    }
+  }
+
   &__wapper {
     &_item {
       display: flex;

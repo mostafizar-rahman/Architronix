@@ -87,6 +87,7 @@
     }
     .menu_icon {
       display: none;
+      cursor: pointer;
       @include breakpoint(md) {
         display: block;
       }

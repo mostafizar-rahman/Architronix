@@ -4,7 +4,7 @@ $(document).ready(function () {
   $('.banner__slides').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     arrows: true,
     dots: false,
@@ -205,25 +205,31 @@ $(document).ready(function () {
   })
 
 
-// -------------- Scroll top sticky header
-const header = document.querySelector(".header")
-const isSticky = (e) => {
+  // -------------- Scroll top sticky header
+  const header = document.querySelector(".header")
+  const isSticky = (e) => {
     const scrollTop = window.scrollY;
 
     if (scrollTop >= 35) {
-        header.style.top='-50px';
-        header.style.transition = "all 1s";
+      const mediaWidth = window.matchMedia("(max-width: 768px)")
+      if (mediaWidth.matches) {
+        header.style.top = '0px';
+      }
+      else {
 
+        header.style.top = '-50px';
+      }
+      header.style.transition = "all 1s";
     }
     else {
-      header.style.top='0px'
+      header.style.top = '0px'
     }
 
-};
-window.addEventListener("scroll", isSticky);
+  };
+  window.addEventListener("scroll", isSticky);
 
 
-
+  AOS.init();
 
 
 });
