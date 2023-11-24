@@ -21,8 +21,11 @@
       @include breakpoint(xl) {
         padding: 70px 0px 70px 60px;
       }
-      @include breakpoint(lg) {
-        padding: 70px 60px;
+      @include breakpoint(md) {
+        padding: 70px 40px;
+      }
+      @include breakpoint(sm) {
+        padding: 50px 10px;
       }
       color: var(--white);
       h5 {

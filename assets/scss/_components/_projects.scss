@@ -109,7 +109,7 @@
       left: 23%;
     }
     @include breakpoint(xs) {
-      left: 15%;
+      left: 8%;
     }
 
     &::after {
@@ -119,7 +119,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-image: url("/assets/img/icon/Group\ 47.png");
+      background-image: url("./assets/img/icon/Group\ 47.png");
       background-repeat: no-repeat;
       width: 40px;
       height: 23px;
@@ -147,9 +147,10 @@
     }
     @include breakpoint(sm) {
       right: 20%;
+      padding: 20px;
     }
     @include breakpoint(xs) {
-      right: 15%;
+      right: 8%;
     }
 
 
@@ -164,6 +165,7 @@
       background-repeat: no-repeat;
       width: 40px;
       height: 20px;
+     
     }
   }
 }

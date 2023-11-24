@@ -24,7 +24,7 @@ a {
     content: "";
     position: absolute;
     top: 0;
-    left: 225px;
+    left: 14.9%;
     width: 1px;
     height: 100%;
     background-color: var(--gray);
@@ -37,7 +37,7 @@ a {
     content: "";
     position: absolute;
     top: 0;
-    right: 225px;
+    right: 14.9%;
     width: 1px;
     height: 100%;
     background-color: var(--gray);
@@ -60,10 +60,10 @@ a {
   }
 }
 .mt_52 {
-  margin-top: 52px;
+  margin-top: 54px;
 }
 .mt_54 {
-  margin-top: 54px;
+  margin-top: 58px;
 }
 .px_45 {
   padding: 0 45px;
@@ -133,6 +133,10 @@ a {
   background-repeat: no-repeat;
   width: 50px;
   height: 20px;
+  @include breakpoint(sm){
+    width: 40px;
+    height: 15px;
+  }
 }
 .prev-arrow {
   left: 81%;
@@ -152,9 +156,7 @@ a {
   @include breakpoint(sm){
     left: 70%;
   }
-  @include breakpoint(xs){
-    left: 65%;
-  }
+
   
 }
 .next-arrow {
