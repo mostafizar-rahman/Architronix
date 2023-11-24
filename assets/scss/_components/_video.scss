@@ -1,4 +1,8 @@
 .video {
+  margin-top: 135px;
+  @include breakpoint(xxl) {
+    margin-top: 0;
+  }
   @include breakpoint(xl) {
     .title {
       margin-bottom: 230px;

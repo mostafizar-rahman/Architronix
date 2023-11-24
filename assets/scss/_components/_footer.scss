@@ -7,6 +7,17 @@
       margin: auto;
       padding: 40px 0;
     }
+   
+    &_socal{
+      li {
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .divided {
+        color: #253b2f;
+        transform: rotate(18deg);
+      }
+    }
     &_address {
       .name {
         font-size: 20px;

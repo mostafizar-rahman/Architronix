@@ -1,9 +1,10 @@
 .projects {
   &__wapper {
-    position: relative;
+    position: relative ;
     .projects__slider {
       max-width: 1245px;
       margin-left: auto;
+      position: static !important;
     }
     &_item {
       position: relative;
@@ -11,6 +12,8 @@
       .project__img {
         width: 100%;
         height: 100%;
+        min-height: 400px;
+        object-fit: cover;
       }
     }
     &_info {
@@ -75,11 +78,6 @@
         }
       }
     }
-
-    // .slick-list {
-    //   overflow: inherit;
-    //   overflow-x: clip !important;
-    // }
   }
 
   .common__nav {
@@ -88,38 +86,29 @@
     border: none;
     width: 70px;
     height: 55px;
-    top: 108.5%;
+    top: 108.7%;
     @include breakpoint(xl) {
-      top: 150%;
-    }
-    @include breakpoint(lg) {
-      top: 160%;
-    }
-    @include breakpoint(md) {
-      top: 170%;
-    }
-    @include breakpoint(sm) {
-      top: 180%;
-    }
-    @include breakpoint(xs) {
-      top: 210%;
+      top: 95%;
     }
   }
   .prev-arrow {
-    left: 31%;
+    left: 38%;
     transform: rotate(180deg);
     background-color: var(--pra);
     z-index: 10;
     @include breakpoint(xxl) {
-      left: 45%;
+      left: 44%;
     }
     @include breakpoint(xl) {
-      left: 30%;
+      left: 35%;
     }
     @include breakpoint(md) {
-      left: 25%;
+      left: 27%;
     }
     @include breakpoint(sm) {
+      left: 23%;
+    }
+    @include breakpoint(xs) {
       left: 15%;
     }
 
@@ -137,7 +126,7 @@
     }
   }
   .next-arrow {
-    right: 45%;
+    right: 40%;
     width: 200px;
     padding: 0 23px;
     background-color: var(--pra);
@@ -145,17 +134,24 @@
     font-size: 17px;
     @include justify();
     @include breakpoint(xxl) {
-      right: 30%;
+      right: 32%;
     }
     @include breakpoint(xl) {
+      right: 35%;
+    }
+    @include breakpoint(lg) {
+      right: 30%;
+    }
+    @include breakpoint(md) {
       right: 25%;
     }
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       right: 20%;
     }
-    @include breakpoint(md) {
+    @include breakpoint(xs) {
       right: 15%;
     }
+
 
     &::after {
       content: "";
